@@ -24,17 +24,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-        providers: [
-          ChangeNotifierProvider(create: (_) => HogwartsCharacterProvider()),
-          ChangeNotifierProvider(create: (_) => FriendsProivder()),
-          ChangeNotifierProvider(create: (_) => profileDetials()),
-          ChangeNotifierProvider(create: (_) => ExchangeRateProvider()),
-        ],
-        child: MaterialApp(
-            title: 'Flutter Demo',
-            theme: ThemeData(
-              primarySwatch: Colors.blue,
-            ),
-            home: login()));
+      providers: [
+        ChangeNotifierProvider(create: (_) => HogwartsCharacterProvider()),
+        ChangeNotifierProvider(create: (_) => FriendsProivder()),
+        ChangeNotifierProvider(create: (_) => profileDetials()),
+        ChangeNotifierProvider(create: (_) => ExchangeRateProvider()),
+      ],
+      child: MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: login(),
+      ),
+    );
   }
 }
